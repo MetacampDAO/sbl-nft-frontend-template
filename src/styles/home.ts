@@ -11,8 +11,9 @@ export const CTAContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 360px;
+  width: fit-content;
   background-color: #21262a;
+  color: white;
   border-radius: 12px;
   padding: 8px;
 `;
