@@ -24,14 +24,14 @@ export default function Home() {
     (async () => {
       if (wallet && wallet.publicKey) {
         const metaplex = new Metaplex(connection);
-        const allTokeAccountByOwner = await metaplex
+        const allTokenAccountByOwner = await metaplex
           .nfts()
           .findAllByOwner({ owner: wallet.publicKey });
 
         // FILTER BY COLLECTION
 
         const data = await Promise.all(
-          allTokeAccountByOwner.map(
+          allTokenAccountByOwner.map(
             async (item) =>
               await metaplex
                 .nfts()
